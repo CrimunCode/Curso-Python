@@ -67,7 +67,7 @@ listaABorrar.clear() # Para vaciar la lista
 
 # Shorthand para mostrar una lista
 
-# [print(tecnologia) for tecnologia in tecnologias] # Este sería el shorthand para una impresión iterable
+# [print(tecnologia) for tecnologia in tecnologias] # Este sería el shorthand para una impresión iterable de una lista
 
 # Ejemplo Práctico
 
