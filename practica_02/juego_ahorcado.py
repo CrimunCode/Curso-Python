@@ -29,28 +29,28 @@ def juego_ahorcado():
         letra_ingresada = input("Escriba una letra: ").lower()
 
         if len(letra_ingresada) != 1 or not letra_ingresada.isalpha():
-            print("Por favor escriba una letra válida (sólo escribir una letra)")
+            print("\nPor favor escriba una letra válida (sólo escribir una letra)")
         elif letra_ingresada in letras_adivinadas:
-            print("Ya has utilizado esa letra, prueba con otra")
+            print("\nYa has utilizado esa letra, prueba con otra")
         else:
             letras_adivinadas.append(letra_ingresada)
 
             if letra_ingresada in palabra_secreta:
-                print(f"Muy bien, has acertado, la letra {letra_ingresada} está presente en la palabra secreta")
+                print(f"\nMuy bien, has acertado, la letra '{letra_ingresada}' está presente en la palabra secreta")
             else:
                 intentos -= 1
-                print(f"Lo siento mucho, la letra {letra_ingresada}, no está presente en la palabra secreta")
+                print(f"\nLo siento mucho, la letra '{letra_ingresada}', no está presente en la palabra secreta")
                 print(f"Te quedan {intentos} intentos")
         
         progreso_actual = mostrar_progreso(palabra_secreta, letras_adivinadas)
         print(progreso_actual)
 
         if "_" not in progreso_actual:
-            print(f"¡Felicidades, has ganado! La palabra completa es: {palabra_secreta}")
+            print(f"¡Felicidades, has ganado! La palabra completa es: {palabra_secreta.upper()}")
             juego_terminado = True
     
         if intentos == 0:
-            print(f"Lo sentimos mucho, se te han acabado los intentos, la palabra secreta era: {palabra_secreta}")
+            print(f"Lo sentimos mucho, se te han acabado los intentos, la palabra secreta era: {palabra_secreta.upper()}")
             break
 
 juego_ahorcado()
