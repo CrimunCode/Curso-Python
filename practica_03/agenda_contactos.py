@@ -10,7 +10,7 @@ def mostrar_menu():
 
 
 def crear_contacto(agenda):
-    nombre = input("Ingrese el nombre completo del contacto: ".upper())
+    nombre = input("Ingrese el nombre completo del contacto: ")
     telefono = input("Ingrese el teléfono del contacto: ")
     email = input("Ingrese el email del contacto: ")
     agenda[nombre] = {"telefono": telefono, "email": email}
@@ -19,18 +19,19 @@ def crear_contacto(agenda):
 
 def ver_concatos(agenda):
     if agenda:
-        print("\nLista de contactos: ")
+        print("\nLista de contactos: \n")
         for nombre, info in agenda.items():
+            print("-" * 20)
             print(f"Nombre   : {nombre}")
             print(f"Teléfono : {info["telefono"]}")
             print(f"Email    : {info["email"]}")
-            print("-" * 20)
+            print("-" * 20, "\n")
     else:
         print("La agenda está vacía")
 
 
 def buscar_contacto(agenda):
-    nombre = input("Ingrese el nombre del contacto a buscar: ".upper())
+    nombre = input("\nIngrese el nombre del contacto a buscar: ")
     if nombre in agenda:
         print(f"Nombre   : {nombre}")
         print(f"Teléfono : {agenda[nombre]["telefono"]}")
@@ -40,12 +41,12 @@ def buscar_contacto(agenda):
 
 
 def eliminar_contacto(agenda):
-    nombre = input("Ingrese el nombre del contacto que desea eliminar: ".upper())
-    if nombre in agenda:
+    nombre = input("Ingrese el nombre del contacto que desea eliminar: ")
+    if nombre.upper() in agenda:
         del agenda[nombre]
         print(f"El contacto {nombre} ha sido eliminado de la agenda")
     else:
-        print(f"No se ha encontrado el contacto con el nombre: {nombre.upper()}")
+        print(f"No se ha encontrado el contacto con el nombre: {nombre}")
 
 
 def agenda_contactos():
