@@ -45,6 +45,9 @@ print("\n", lista_nueva, "\n")
 lista_nueva = lista_colores
 print("\n", lista_nueva, "\n")
 
+# Contar el numero de elementos de una lista
+print(len(lista_numeros))
+
 # Contar valores repetidos en listas
 print(lista_colores.count("Naranja"), "\n")
 
