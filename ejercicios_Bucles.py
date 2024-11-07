@@ -34,3 +34,13 @@ i = 1
 for pais in paises:
     print(f"Nº {i} : {pais}")
     i+=1
+
+# 5) Iterar con un bucle la lista_numeros y mostrar todos los valores, exeptuando los valores 10 y 356.
+print("\n")
+lista_numeros = [10,45,356,10,10,10,46,67,45,10,10,43,10,65,10,10]
+lista_numeros.sort()
+for numero in lista_numeros:
+    if numero == 10 or numero == 356:
+        continue
+    print(f"Los valores son: {numero}")
+print("\n")
