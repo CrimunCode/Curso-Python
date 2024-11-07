@@ -79,7 +79,7 @@ for tecnologia in tecnologias:
 
 print(listaConY)
 
-# lo que se agrega en mayúsculas |        el buble             | la condición
+# lo que se agrega en mayúsculas |        el bucle             | la condición
 lista2ConY = [tecnologia.upper() for tecnologia in tecnologias if "y" in tecnologia] # Shorthand del ejemplo anterior
 
 print(lista2ConY)
