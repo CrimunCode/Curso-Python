@@ -36,3 +36,28 @@ for color in colores:
         continue
     print(f"-Color {color}.")
 print("\n")
+
+# Terminar el bucle antes de tiempo break
+colores = ['Rojo', 'Azul', 'Verde', 'Amarillo']
+print("---LISTADO DE COLORES---")
+
+for color in colores:
+    if color == "Azul":
+        print("Se ha roto la ejecución del bucle")
+        break
+    print(f"-Color {color}.")
+print("\n")
+
+# Bucle while
+i = 1
+
+while i <= 5:
+    print(f"El valor del bulce es: {i}.")
+    i += 1
+print("\n")
+
+# Bucle do while, no existe en Python, pero se puede simular
+while True:
+    salida = input("Indrese 'salir' para finalizar. \n").lower()
+    if salida == 'salir':
+        break
