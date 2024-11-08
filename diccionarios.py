@@ -1,13 +1,13 @@
-# DICCIONARIO (dict): Es una Colección de pares clave-valor (key-value) desordenada y mutable similar a los objetos
+# # DICCIONARIO (dict): Es una Colección de pares clave-valor (key-value) desordenada y mutable similar a los objetos
 
 
-diccionario = {
-    "nombre": "Cristian",
-    "canal": "@crimun",
-    "tecnologias": ["Python", "Javascript"],
-    "edad": 40,
-    "direccion": { "calle": "Av. Guillermo Ulriksen","nro": "1781","ciudad": "La Serena", },
-}
+# diccionario = {
+#     "nombre": "Cristian",
+#     "canal": "@crimun",
+#     "tecnologias": ["Python", "Javascript"],
+#     "edad": 40,
+#     "direccion": { "calle": "Av. Guillermo Ulriksen","nro": "1781","ciudad": "La Serena", },
+# }
 
 # print(diccionario)
 # tipo = type(diccionario) # Nos indica el tipo de dato <class 'dict'>
@@ -17,7 +17,7 @@ diccionario = {
 # constructorDiccionario = dict(nombre = "crimun", youtube = "@crimun") # Se puede crear con constructor, sin parentesis dobles a deferencia de otras estructuras (tupla, listas, set) y los atributos claves van sin comillas a diferencia de otras estructuras (tupla, listas, set)
 # print(constructorDiccionario)
 
-## Como acceder a cada propiedad del diccionario
+# ## Como acceder a cada propiedad del diccionario
 
 # nombre = diccionario['nombre']
 # canal = diccionario['canal']
@@ -40,16 +40,16 @@ diccionario = {
 # print(items)
 
 # if "tecnologias" in diccionario: # Con esto podemos comprobar si una key existe pero no un valor
-    # print('Si, existe esta key')
+#     print('Si, existe esta key')
 
-## Cambio de valores en un diccionario
+# ## Cambio de valores en un diccionario
 
 # diccionario['tecnologias'] = ['Java', 'NodeJS']
 # print(diccionario)
 # diccionario.update({"direccion": { "calle": "Calle Raul Bitran","nro": "1700","ciudad": "La Serena", }})
 # print(diccionario)
 
-## Agregar items:
+# ## Agregar items:
 
 # diccionario['profesion'] = 'Programador'
 # print(diccionario)
@@ -57,7 +57,7 @@ diccionario = {
 # diccionario.update({'comida favorita': 'Guiso de Mote'})
 # print(diccionario)
 
-## Eliminar items
+# ## Eliminar items
 
 # diccionario.pop('comida favorita') # Eliminar un elemento puntual
 # print(diccionario)
@@ -72,13 +72,13 @@ diccionario = {
 # print(diccionario)
 
 
-## Bucles (loops) para diccionarios:
+# ## Bucles (loops) para diccionarios:
 
-curso_python = {
-    'nombre': 'Python desde cero',
-    'duracion': '7 hrs.',
-    'dificultad': 'media',
-}
+# curso_python = {
+#     'nombre': 'Python desde cero',
+#     'duracion': '7 hrs.',
+#     'dificultad': 'media',
+# }
 
 # for key in curso_python: # EL bucle for común hará un recorrrido de las keys
 #     print(f"{key.upper()}: {curso_python[key]}")
@@ -89,7 +89,7 @@ curso_python = {
 # for k,v in curso_python.items(): # Desempaquetamos la tupla de cada uno de los elementos de la lista que devuelve items
 #     print(f"{k.upper()}: {v.capitalize()}")
 
-# Copias de diccionarios:
+# # Copias de diccionarios:
 
 # copia = curso_python.copy() # Crea una copia exacta, pero está apuntando a otra variable que se encuentra en otro espacio de memoria
 # print(copia)
@@ -119,7 +119,7 @@ familia = {
 }
 
 # print(familia['hijo1']['nombre'])
-# nombreHijo1 = familia['hijo1']['nombre']
+nombreHijo1 = familia['hijo1']['nombre']
 # print(nombreHijo1)
 
 for x,obj in familia.items():
