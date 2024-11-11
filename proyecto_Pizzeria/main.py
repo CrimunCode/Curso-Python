@@ -157,11 +157,11 @@ while True:
         if dinero>total:
             vuelto = dinero-total
             print(f"\nEste el su vuelto: ${vuelto}")
-            print("\n Gracias por preferir Pizzas Python, vuelva pronto!!")
+            print("\nGracias por preferir Pizzas Python, vuelva pronto!!")
             break
         elif dinero == total:
-            print("\n No hay vuelto, ya que se pagó el valor exacto.")
-            print("\n Gracias preferir Pizzas Python, vuelva pronto!!")
+            print("\nSe ha pagado el valor exacto. 👍🏼")
+            print("\nGracias preferir Pizzas Python, vuelva pronto!!")
             break
         elif dinero<total:
             diferencia = total - dinero
