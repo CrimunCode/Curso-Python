@@ -67,42 +67,45 @@ while True:
     for pizza in pizzas:
         print(f"{x}) {pizzas[pizza]['nombre']} ; ${pizzas[pizza]['precio']}")
         x+=1
-    eleccion = int(input("\nPizza seleccionada: "))
-
-    match eleccion:
-        case 1:
-            print(f"\nHa elegido la Pizza {pizzas['p1m']['nombre']}\nValor: ${pizzas['p1m']['precio']}")
-            total += pizzas['p1m']['precio']
-            pedido.append(f"{pizzas['p1m']['nombre']} ; ${pizzas['p1m']['precio']}")
-            break
-        case 2:
-            print(f"\nHa elegido la Pizza {pizzas['p1f']['nombre']}\nValor: ${pizzas['p1f']['precio']}")
-            total += pizzas['p1f']['precio']
-            pedido.append(f"{pizzas['p1f']['nombre']} ; ${pizzas['p1f']['precio']}")
-            break
-        case 3:
-            print(f"\nHa elegido la Pizza {pizzas['p1e']['nombre']}\nValor: ${pizzas['p1e']['precio']}")
-            total += pizzas['p1e']['precio']
-            pedido.append(f"{pizzas['p1e']['nombre']} ; ${pizzas['p1e']['precio']}")
-            break
-        case 4:
-            print(f"\nHa elegido la Pizza {pizzas['p2m']['nombre']}\nValor: ${pizzas['p2m']['precio']}")
-            total += pizzas['p2m']['precio']
-            pedido.append(f"{pizzas['p2m']['nombre']} ; ${pizzas['p2m']['precio']}")
-            break
-        case 5:
-            print(f"\nHa elegido la Pizza {pizzas['p2f']['nombre']}\nValor: ${pizzas['p2f']['precio']}")
-            total += pizzas['p2f']['precio']
-            pedido.append(f"{pizzas['p2f']['nombre']} ; ${pizzas['p2f']['precio']}")
-            break
-        case 6:
-            print(f"\nHa elegido la Pizza {pizzas['p2e']['nombre']}\nValor: ${pizzas['p2e']['precio']}")
-            total += pizzas['p2e']['precio']
-            pedido.append(f"{pizzas['p2e']['nombre']} ; ${pizzas['p2e']['precio']}")
-            break
-        case _:
-            print("Opción inválida. Seleccione una opción del Menú de las Pizzas")
-    
+    eleccion = input("\nPizza seleccionada: ")
+    if eleccion.isdigit():
+        eleccion = int(eleccion) # Lo estamos pasando de texto a entero
+        match eleccion:
+            case 1:
+                print(f"\nHa elegido la Pizza {pizzas['p1m']['nombre']}\nValor: ${pizzas['p1m']['precio']}")
+                total += pizzas['p1m']['precio']
+                pedido.append(f"{pizzas['p1m']['nombre']} ; ${pizzas['p1m']['precio']}")
+                break
+            case 2:
+                print(f"\nHa elegido la Pizza {pizzas['p1f']['nombre']}\nValor: ${pizzas['p1f']['precio']}")
+                total += pizzas['p1f']['precio']
+                pedido.append(f"{pizzas['p1f']['nombre']} ; ${pizzas['p1f']['precio']}")
+                break
+            case 3:
+                print(f"\nHa elegido la Pizza {pizzas['p1e']['nombre']}\nValor: ${pizzas['p1e']['precio']}")
+                total += pizzas['p1e']['precio']
+                pedido.append(f"{pizzas['p1e']['nombre']} ; ${pizzas['p1e']['precio']}")
+                break
+            case 4:
+                print(f"\nHa elegido la Pizza {pizzas['p2m']['nombre']}\nValor: ${pizzas['p2m']['precio']}")
+                total += pizzas['p2m']['precio']
+                pedido.append(f"{pizzas['p2m']['nombre']} ; ${pizzas['p2m']['precio']}")
+                break
+            case 5:
+                print(f"\nHa elegido la Pizza {pizzas['p2f']['nombre']}\nValor: ${pizzas['p2f']['precio']}")
+                total += pizzas['p2f']['precio']
+                pedido.append(f"{pizzas['p2f']['nombre']} ; ${pizzas['p2f']['precio']}")
+                break
+            case 6:
+                print(f"\nHa elegido la Pizza {pizzas['p2e']['nombre']}\nValor: ${pizzas['p2e']['precio']}")
+                total += pizzas['p2e']['precio']
+                pedido.append(f"{pizzas['p2e']['nombre']} ; ${pizzas['p2e']['precio']}")
+                break
+            case _:
+                print("Opción inválida. Seleccione una opción del Menú de las Pizzas")
+    else:
+        error = str(eleccion)
+        print(f"\nPor favor introduzca una opción válida ({error}), NO es una opción válida\n")
 # Menu de los ingredientes extra
 print("\nSelección de ingredientes Extra:\n")
 while True:
@@ -110,34 +113,38 @@ while True:
     for ingrediente in ingredientes_extra:
         print(f"{x}) {ingredientes_extra[ingrediente]['ingrediente']} ; ${ingredientes_extra[ingrediente]['precio']}")
         x+=1
-    eleccion = int(input("\nIngrediente Extra: "))
-    match eleccion:
-        case 0:
-            print("\nHa elegido no añadir ingredientes extra")
-            break
-        case 1:
-            print(f"\nHa elegido como ingrediente extra: {ingredientes_extra['ie1']['ingrediente']} ; ${ingredientes_extra['ie1']['precio']}")
-            total += ingredientes_extra['ie1']['precio']
-            print(f"\nValor Pizza + Ingrediente extra: ${total}.\n")
-            pedido.append(f"{ingredientes_extra['ie1']['ingrediente']} ; ${ingredientes_extra['ie1']['precio']}")
-        case 2:
-            print(f"\nHa elegido como ingrediente extra: {ingredientes_extra['ie2']['ingrediente']} ; ${ingredientes_extra['ie2']['precio']}")
-            total += ingredientes_extra['ie2']['precio']
-            print(f"\nValor Pizza + Ingrediente extra: ${total}.\n")
-            pedido.append(f"{ingredientes_extra['ie2']['ingrediente']} ; ${ingredientes_extra['ie2']['precio']}")
-        case 3:
-            print(f"\nHa elegido como ingrediente extra: {ingredientes_extra['ie3']['ingrediente']} ; ${ingredientes_extra['ie3']['precio']}")
-            total += ingredientes_extra['ie3']['precio']
-            print(f"\nValor Pizza + Ingrediente extra: ${total}.\n")
-            pedido.append(f"{ingredientes_extra['ie3']['ingrediente']} ; ${ingredientes_extra['ie3']['precio']}")
-        case 4:
-            print(f"\nHa elegido como ingrediente extra: {ingredientes_extra['ie4']['ingrediente']} ; ${ingredientes_extra['ie4']['precio']}")
-            total += ingredientes_extra['ie4']['precio']
-            print(f"\nValor Pizza + Ingrediente extra: ${total}.\n")
-            pedido.append(f"{ingredientes_extra['ie4']['ingrediente']} ; ${ingredientes_extra['ie4']['precio']}")
-        case _:
-            print("Opción inválida. Seleccione una opción del Menú de Ingredientes Extra")
-
+    eleccion = input("\nIngrediente Extra: ")
+    if eleccion.isdigit():
+        eleccion = int(eleccion) # Lo estamos pasando de texto a entero
+        match eleccion:
+            case 0:
+                print("\nHa elegido no añadir ingredientes extra")
+                break
+            case 1:
+                print(f"\nHa elegido como ingrediente extra: {ingredientes_extra['ie1']['ingrediente']} ; ${ingredientes_extra['ie1']['precio']}")
+                total += ingredientes_extra['ie1']['precio']
+                print(f"\nValor Pizza + Ingrediente extra: ${total}.\n")
+                pedido.append(f"{ingredientes_extra['ie1']['ingrediente']} ; ${ingredientes_extra['ie1']['precio']}")
+            case 2:
+                print(f"\nHa elegido como ingrediente extra: {ingredientes_extra['ie2']['ingrediente']} ; ${ingredientes_extra['ie2']['precio']}")
+                total += ingredientes_extra['ie2']['precio']
+                print(f"\nValor Pizza + Ingrediente extra: ${total}.\n")
+                pedido.append(f"{ingredientes_extra['ie2']['ingrediente']} ; ${ingredientes_extra['ie2']['precio']}")
+            case 3:
+                print(f"\nHa elegido como ingrediente extra: {ingredientes_extra['ie3']['ingrediente']} ; ${ingredientes_extra['ie3']['precio']}")
+                total += ingredientes_extra['ie3']['precio']
+                print(f"\nValor Pizza + Ingrediente extra: ${total}.\n")
+                pedido.append(f"{ingredientes_extra['ie3']['ingrediente']} ; ${ingredientes_extra['ie3']['precio']}")
+            case 4:
+                print(f"\nHa elegido como ingrediente extra: {ingredientes_extra['ie4']['ingrediente']} ; ${ingredientes_extra['ie4']['precio']}")
+                total += ingredientes_extra['ie4']['precio']
+                print(f"\nValor Pizza + Ingrediente extra: ${total}.\n")
+                pedido.append(f"{ingredientes_extra['ie4']['ingrediente']} ; ${ingredientes_extra['ie4']['precio']}")
+            case _:
+                print("Opción inválida. Seleccione una opción del Menú de Ingredientes Extra")
+    else:
+        error = str(eleccion)
+        print(f"\nPor favor introduzca una opción válida ({error}), NO es una opción válida\n")
 print("\n--- SU PEDIDO ---\n")
 for i in pedido:
     print(f"-{i}.")
