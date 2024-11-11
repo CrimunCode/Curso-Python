@@ -1,4 +1,5 @@
 # Menú de Pizzas
+
 p1m = { "nombre": "Hawaiana - Mediana", "precio" : 12600,
     "ingredientes": ["Churrasco", "Queso Mozarella", "Tomate","Salsa de Palta"],
 }
@@ -149,4 +150,23 @@ print("\n--- SU PEDIDO ---\n")
 for i in pedido:
     print(f"-{i}.")
 print(f"\nEl total a pagar es: ${total}\n")
-print("\n Gracias por preferir Pizzas Python, vuelva pronto!!")
+while True:
+    dinero  = input("Ingrese el dinero: $")
+    if dinero.isdigit():
+        dinero = int(dinero)
+        if dinero>total:
+            vuelto = dinero-total
+            print(f"\nEste el su vuelto: ${vuelto}")
+            print("\n Gracias por preferir Pizzas Python, vuelva pronto!!")
+            break
+        elif dinero == total:
+            print("\n No hay vuelto, ya que se pagó el valor exacto.")
+            print("\n Gracias preferir Pizzas Python, vuelva pronto!!")
+            break
+        elif dinero<total:
+            diferencia = total - dinero
+            print(f"Falta una diferencia de: ${diferencia}")
+            total=diferencia
+    else:
+        error = str(dinero)
+        print(f"({error}) No es dinero válido, por favor ingrese dinero real :)")
