@@ -8,13 +8,13 @@
 # import tkinter
 
 # Importaciones con alias
-# import tkinter as tk
+import tkinter as tk
 
 # importar todo para no tener que escribir el alias del módulo
-from tkinter import *
+# from tkinter import *
 
 # Creación de la ventana principal
-root = Tk()
+root = tk.Tk()
 
 # Cambiar el título de la ventana
 root.title("Curso de Tkinter en Programación con Python")
@@ -26,8 +26,8 @@ root.title("Curso de Tkinter en Programación con Python")
 root.geometry("800x600+560+240")
 
 # Creación de las etiquetas
-mensaje = Label(root, text="Mi 1º etiqueta con Tkinter.")
-mensaje_2 = Label(root, text="Mi 2º etiqueta con Tkinter.")
+mensaje = tk.Label(root, text="Mi 1º etiqueta con Tkinter.")
+mensaje_2 = tk.Label(root, text="Mi 2º etiqueta con Tkinter.")
 
 # no se pueden utilizar un mismo mensaje con ambos métodos pack() y grid()
 # Metodo pack() de Tkniter
@@ -50,8 +50,8 @@ mensaje.grid(row=0, column=0)
 mensaje_2.grid(row=0, column=1)
 
 # Aplicar el método grid() en la misma línea de la declaración del widget
-mensaje = Label(root, text="Mi 1º etiqueta con Tkinter.").grid(row=1, column=0)
-mensaje_2 = Label(root, text="Mi 2º etiqueta con Tkinter.").grid(row=1, column=1)
+mensaje = tk.Label(root, text="Mi 1º etiqueta con Tkinter.").grid(row=1, column=0)
+mensaje_2 = tk.Label(root, text="Mi 2º etiqueta con Tkinter.").grid(row=1, column=1)
 
 # Bucle de ejecución: hay que hacer un bucke, para que se aprecie la ventana
 root.mainloop()
