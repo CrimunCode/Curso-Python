@@ -5,8 +5,8 @@
 p = "Programación"
 f = "Fácil"
 
-print(f"\n",p + f)
-print(f"\n",p + " " + f)
+print("\n",p + f)
+print("\n",p + " " + f)
 
 # Concatenar un String con Numero (Da error)
 p = "Programación"
