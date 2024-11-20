@@ -15,16 +15,16 @@ f = 10
 # print(p + " " + f) # Da error por que no se puede concatenar un String con un Integer
 
 # Convertir el Integer a String
-print(f"\n",p + " " + str(f)) 
+print("\n",p + " " + str(f)) 
 
 # Concatenar con ,
-print(f"\n",p,f)
+print("\n",p,f)
 
 # Concatenar Strings (solo para strings) con el método Join alternativa 1
 p = "Programación"
 f = "Fácil"
 
-print(f"\n"," ".join([p,f,p,f]))
+print("\n"," ".join([p,f,p,f]))
 
 # Concatenar Strings (solo para strings) con el método Join alternativa 2
 
@@ -33,7 +33,7 @@ separador = ";"
 
 concatena = separador.join(colores)
 
-print(f"\n",concatena)
+print("\n",concatena)
 
 # Formatear Strings con el operador %
 p = "Programación"
