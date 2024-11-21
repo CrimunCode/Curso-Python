@@ -32,7 +32,7 @@ resultado = numero_1 * numero_2
 La multiplicación de 10 * 34.500000 da como resultado: 345.000000.
 '''
 
-print("\n", "La multiplicción de %i * %f da como resultado: %f." % (numero_1, numero_2, resultado))
+print("\n", "La multiplicción de %i * %.1f da como resultado: %.1f." % (numero_1, numero_2, resultado)) # %.x donde x = al número de decimales que queremos mostrar
 
 # 4) Con el siguiente código, crea un sistema que sepa contar las coincidencias de una letra introducida en la consola.
 
