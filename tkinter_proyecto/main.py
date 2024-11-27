@@ -1,7 +1,8 @@
 # Impportaciones
 import os
 import tkinter as tk
-from PIL import ImageTk, Image
+from PIL import ImageTk, Image 
+import getpass as gp
 
 # Rutas
 # Ruta del directorio principal (de este archivo)
@@ -24,8 +25,10 @@ usuario_creado = ()
 while True:
     nuevo_usuario_1 = input("\nIngrese un nombre para el nuevo usuario. : ")
     nuevo_usuario_2 = input("\nRepita nuevamente el nombre de usuario. : ")
-    nueva_contrasena_1 = input("\nIngrese una contraseña. : ")
-    nueva_contrasena_2 = input("\nRepita nuevamente la contraseña. : ")
+    # nueva_contrasena_1 = input("\nIngrese una contraseña. : ")
+    nueva_contrasena_1 = gp.getpass("\nIngrese una contraseña. : ")
+    # nueva_contrasena_2 = input("\nRepita nuevamente la contraseña. : ")
+    nueva_contrasena_2 = gp.getpass("\nRepita nuevamente la contraseña. : ")
     
     if nuevo_usuario_1 != nuevo_usuario_2 or nueva_contrasena_1 != nueva_contrasena_2:
         print("Los valores no coinciden, vuelva a intentarlo.")
