@@ -12,30 +12,30 @@ root.title("Estilos y marcos de Tkinter")
 
 # Marco o frame
 marco1 = tk.LabelFrame(root, 
-                      text="entrada de datos",
+                      text="Entrada de datos",
                       padx=20,
                       pady=20,
                       )
-marco1.pack(padx=15, pady=15) # Padding para el marco con respecto a la ventana
+marco1.grid(row=0, column=0, padx=15, pady=15)
 
 marco2 = tk.LabelFrame(root,
                       text="Enviar",
                       padx=20,
                       pady=20,
                       )
-marco2.pack(padx=5, pady=15) # Padding para el marco con respecto a la ventana
+marco2.grid(row=1, column=0, padx=5, pady=15) # Padding para el marco con respecto a la ventana
 
 marco3 = tk.LabelFrame(root,
                       text="Resultado",
                       padx=20,
                       pady=20,
                       )
-marco3.pack(padx=5, pady=15) # Padding para el marco con respecto a la ventana
+marco3.grid(row=2, column=0, padx=5, pady=15) # Padding para el marco con respecto a la ventana
 
 # Entrada de datos
 entrada = tk.Entry(marco1, 
                    background="chocolate1", # Color de fondo
-                   border=3, # Borde
+                   border=5, # Borde
                    foreground="Blue3", # color de la fuente
                    width=30, # Ancho en tamaño de carácteres
                    )
@@ -49,7 +49,7 @@ def f_enviar():
     tk.Label(marco3, 
              text=f"Hola {nombre}",
              background="skyblue",
-             width=30, # Ancho en pixeles
+             width=27, # Ancho en pixeles
              ).pack()
     entrada.delete(0, tk.END)
     entrada.insert(0, "Escriba su nombre...")
@@ -61,7 +61,7 @@ btn = tk.Button(marco2,
                 background="deepskyblue",
                 foreground="gray98",
                 border=3,
-                width=30, # Ancho en pixeles
+                width=26, # Ancho en pixeles
                 ).pack()
 
 # Bucle de ejecución
