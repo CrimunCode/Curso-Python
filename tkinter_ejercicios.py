@@ -12,7 +12,7 @@ root.title("Ejercicios con Radiobuttons en Tkinter")
 # Tamaño de la ventana
 # root.geometry("420x480")
 # Color de fondo de la ventana
-root.configure(background="AntiqueWhite3")
+root.configure(background="gray98")
 
 # Rutas
 # Ruta del proyecto
@@ -92,13 +92,15 @@ tk.Radiobutton(root,
 # Funciones
 def actualizar_radiobutton():
     if usuario.get() == "Error":
-        tk.Label(root, text="¡No has seleccionado ninguna cuenta!\nInténtalo de nuevo.", foreground="red2").grid(row=4 , column=1)
+        tk.Label(root, text="¡No has seleccionado ninguna cuenta!\nInténtalo de nuevo.", foreground="red2", background="gray98").grid(row=4 , column=1)
     else:
-        tk.Label(root, text="¡No has seleccionado ninguna cuenta!\nInténtalo de nuevo.", foreground="AntiqueWhite3", background="AntiqueWhite3").grid(row=4 , column=1)
+        tk.Label(root, text="¡No has seleccionado ninguna cuenta!\nInténtalo de nuevo.", foreground="gray98", background="gray98").grid(row=4 , column=1)
         tk.Label(root, text=f"Hola {usuario.get()}. Accediendo a tu cuenta personal...", background="gray98").grid(row=4, column=1)
 
+imagen_btn = ImageTk.PhotoImage(Image.open(os.path.join(ruta_iconos, "button.png")))
 # Boton Entrar
-boton_entrar = tk.Button(root, text="Entrar", command=actualizar_radiobutton).grid(row=4, column=0, padx=5, pady=15)
+# boton_entrar = tk.Button(root, text="Entrar", command=actualizar_radiobutton).grid(row=4, column=0, padx=5, pady=15)
+boton_entrar = tk.Button(root, text="Entrar", command=actualizar_radiobutton, image=imagen_btn, border=0, background="gray98").grid(row=4, column=0, padx=5, pady=15)
 
 # Bucle de ejecución
 root.mainloop()
