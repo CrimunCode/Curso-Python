@@ -41,8 +41,10 @@ print(calculo2)
 
 # Importar modulos propios
 
-import modulo_sumar as sm
+import operaciones.modulo_sumar as sm
 
 resultado = sm.sumar(50, 50)
 
 print(resultado)
+
+# Importar módulos que esten dentro de carpetas
