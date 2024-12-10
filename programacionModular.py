@@ -1,4 +1,6 @@
 # Programación Modular
+# Una librería o biblioteca es un conjunto de módulos y/o submódulos
+
 def pow(numero1, numero2):
     return numero1 ** numero2
 
