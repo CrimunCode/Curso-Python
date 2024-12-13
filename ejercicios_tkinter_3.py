@@ -1,6 +1,5 @@
 # Importaciones
 import random
-import tkinter as tk
 
 numero_aleatorio = random.randint(0, 100)
 print("\n", numero_aleatorio, "\n")
