@@ -14,7 +14,7 @@ mb.showinfo("Adivina el número", "Ingrese un número de 0 al 100.\n\n¿Cuántos
 root = tk.Tk()
 root.title("Juego adivinar el número")
 root.resizable(False, False)
-root.attributes("-topmost", True)
+root.attributes("-topmost", True) # Para que no se vaya hacia a tras la ventana principal
 ancho_ventana = 400
 alto_ventana = 100
 
