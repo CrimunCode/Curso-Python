@@ -3,7 +3,7 @@ import random
 
 numero_aleatorio = random.randint(0, 100)
 print("\n", numero_aleatorio, "\n")
-print("Se ha generado un número aleatorio entre e 0 y el 100")
+print("Se ha generado un número aleatorio entre el 0 y el 100")
 intentos = 0
 
 while True:
